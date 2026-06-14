@@ -11,7 +11,7 @@ export default function EssayCard({ essay }: { essay: EssayMeta }) {
         <h3 className="text-base text-ink group-hover:text-ochre transition-colors">
           {essay.title}
         </h3>
-        <span className="text-xs text-text-muted font-sans shrink-0">
+        <span className="text-xs text-text-muted font-sans font-bold shrink-0">
           {essay.date.replace(/^(\d{4})-(\d{2})-(\d{2})$/, '$2.$3')}
         </span>
       </div>

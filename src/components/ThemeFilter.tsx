@@ -20,7 +20,7 @@ export default function ThemeFilter({ themes, active }: { themes: string[]; acti
     <div className="flex flex-wrap gap-3 md:gap-5 justify-center font-sans">
       <button
         onClick={() => setFilter(null)}
-        className={`text-sm tracking-wider transition-colors ${
+        className={`text-sm tracking-wider font-bold transition-colors ${
           active ? 'text-text-muted hover:text-ochre' : 'text-ochre'
         }`}
       >
@@ -30,7 +30,7 @@ export default function ThemeFilter({ themes, active }: { themes: string[]; acti
         <button
           key={t}
           onClick={() => setFilter(t)}
-          className={`text-sm tracking-wider transition-colors ${
+          className={`text-sm tracking-wider font-bold transition-colors ${
             active === t ? 'text-ochre' : 'text-text-muted hover:text-ochre'
           }`}
         >

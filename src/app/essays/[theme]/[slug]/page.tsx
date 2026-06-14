@@ -23,7 +23,7 @@ export default async function EssayPage({ params }: { params: { theme: string; s
     <div className="max-w-reading mx-auto px-5 md:px-12 py-16 md:py-24">
       {/* Meta */}
       <div className="text-center mb-8">
-        <div className="text-[10px] tracking-[0.2em] text-text-muted font-sans">
+        <div className="text-[10px] tracking-[0.2em] text-text-muted font-sans font-bold">
           <Link href={`/essays?theme=${encodeURIComponent(essay.theme)}`} className="hover:text-ochre transition-colors">
             {essay.theme}
           </Link>
@@ -48,7 +48,7 @@ export default async function EssayPage({ params }: { params: { theme: string; s
             {prev && (
               <Link
                 href={`/essays/${encodeURIComponent(prev.theme)}/${encodeURIComponent(prev.slug)}`}
-                className="text-text-muted hover:text-ochre transition-colors"
+                className="text-text-muted font-bold hover:text-ochre transition-colors"
               >
                 &larr; {prev.title}
               </Link>
@@ -58,7 +58,7 @@ export default async function EssayPage({ params }: { params: { theme: string; s
             {next && (
               <Link
                 href={`/essays/${encodeURIComponent(next.theme)}/${encodeURIComponent(next.slug)}`}
-                className="text-text-muted hover:text-ochre transition-colors"
+                className="text-text-muted font-bold hover:text-ochre transition-colors"
               >
                 {next.title} &rarr;
               </Link>

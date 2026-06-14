@@ -8,14 +8,14 @@ export default function ContactPage() {
 
       <div className="space-y-6 text-center">
         <div>
-          <p className="text-xs tracking-[0.2em] text-text-muted font-sans mb-2">邮箱</p>
+          <p className="text-xs tracking-[0.2em] text-text-muted font-sans font-bold mb-2">邮箱</p>
           <a href="mailto:huanyuzhao00@gmail.com" className="text-base text-ink hover:text-ochre transition-colors">
             huanyuzhao00@gmail.com
           </a>
         </div>
         <div className="w-12 h-px bg-warm-line mx-auto" />
         <div>
-          <p className="text-xs tracking-[0.2em] text-text-muted font-sans mb-3">社交</p>
+          <p className="text-xs tracking-[0.2em] text-text-muted font-sans font-bold mb-3">社交</p>
           <div className="flex justify-center gap-6">
             <a href="#" className="text-sm text-text-muted hover:text-ochre transition-colors font-sans">豆瓣</a>
             <a href="#" className="text-sm text-text-muted hover:text-ochre transition-colors font-sans">即刻</a>

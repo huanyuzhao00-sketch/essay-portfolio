@@ -29,7 +29,7 @@ export default function SearchBox({ essays }: { essays: EssayMeta[] }) {
       />
 
       {query && (
-        <p className="text-xs text-text-muted mt-3 font-sans">
+        <p className="text-xs text-text-muted mt-3 font-sans font-bold">
           {results.length ? `找到 ${results.length} 篇` : '没有匹配结果'}
         </p>
       )}
