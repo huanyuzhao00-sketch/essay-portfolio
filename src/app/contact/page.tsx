@@ -9,8 +9,8 @@ export default function ContactPage() {
       <div className="space-y-6 text-center">
         <div>
           <p className="text-xs tracking-[0.2em] text-text-muted font-sans mb-2">邮箱</p>
-          <a href="mailto:your-email@example.com" className="text-base text-ink hover:text-ochre transition-colors">
-            your-email@example.com
+          <a href="mailto:huanyuzhao00@gmail.com" className="text-base text-ink hover:text-ochre transition-colors">
+            huanyuzhao00@gmail.com
           </a>
         </div>
         <div className="w-12 h-px bg-warm-line mx-auto" />

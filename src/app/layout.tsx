@@ -16,10 +16,10 @@ export const metadata: Metadata = {
     default: '夜航船 · 随笔集',
     template: '%s · 夜航船',
   },
-  description: '陈默的短篇随笔作品集——记录城市、季节与日常的缝隙',
+  description: 'Doremi的短篇随笔作品集——记录城市、季节与日常的缝隙',
   openGraph: {
     title: '夜航船 · 随笔集',
-    description: '陈默的短篇随笔作品集',
+    description: 'Doremi的短篇随笔作品集',
     type: 'website',
     locale: 'zh_CN',
   },

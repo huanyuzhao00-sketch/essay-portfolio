@@ -10,7 +10,7 @@ export default function HomePage() {
     <div className="max-w-xl mx-auto px-5 md:px-12 py-16 md:py-24">
       {/* Hero */}
       <section className="text-center mb-16">
-        <p className="text-[10px] tracking-[0.4em] text-text-muted font-sans mb-8">陈默的随笔集</p>
+        <p className="text-[10px] tracking-[0.4em] text-text-muted font-sans mb-8">Doremi的随笔集</p>
         <h1 className="text-3xl md:text-4xl text-ink tracking-[0.15em] mb-6">夜航船</h1>
         <div className="w-8 h-px bg-ochre mx-auto mb-6" />
         <p className="text-sm text-text-muted leading-loose">
