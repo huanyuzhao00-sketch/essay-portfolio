@@ -10,32 +10,26 @@ const links = [
 export default function NavBar() {
   return (
     <header className="sticky top-0 z-10 bg-paper/95 backdrop-blur-sm border-b border-warm-line">
-      {/* Top row: nav links aligned right */}
-      <div className="max-w-xl mx-auto px-5 md:px-12">
-        <nav className="flex justify-end py-3">
-          <ul className="flex gap-5 md:gap-7">
-            {links.map(link => (
-              <li key={link.href}>
-                <Link
-                  href={link.href}
-                  className="text-xs text-text-muted hover:text-ochre transition-colors tracking-widest font-sans font-medium"
-                >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      </div>
-      {/* Bottom row: brand name centered */}
-      <div className="text-center pb-4">
+      <nav className="max-w-xl mx-auto px-5 md:px-12 h-14 flex items-center justify-between">
         <Link
           href="/"
-          className="text-lg text-ochre tracking-[0.25em] hover:text-ink transition-colors"
+          className="text-sm text-ochre tracking-[0.25em] hover:text-ink transition-colors"
         >
           夜航船
         </Link>
-      </div>
+        <ul className="flex gap-5 md:gap-7">
+          {links.map(link => (
+            <li key={link.href}>
+              <Link
+                href={link.href}
+                className="text-sm text-ink font-bold hover:text-ochre transition-colors tracking-wider font-sans"
+              >
+                {link.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
     </header>
   )
 }
