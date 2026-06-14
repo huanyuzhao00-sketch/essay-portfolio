@@ -14,4 +14,7 @@ export default function ContactPage() {
           </a>
         </div>
         <div className="w-12 h-px bg-warm-line mx-auto" />
-     
+      </div>
+    </div>
+  )
+}

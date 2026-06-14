@@ -13,6 +13,7 @@ export default function HomePage() {
         <p className="text-[10px] tracking-[0.4em] text-text-muted font-sans font-bold mb-8">Doremi的随笔集</p>
         <h1 className="text-3xl md:text-4xl text-ink tracking-[0.15em] mb-6">夜航船</h1>
         <div className="w-8 h-px bg-ochre mx-auto mb-6" />
+        <p className="text-base text-ink tracking-[0.1em] mb-2">Doremi</p>
         <p className="text-sm text-text-muted leading-loose">
           零零后作者<br />记录城市、季节与日常的缝隙
         </p>
