@@ -13,7 +13,7 @@ const config: Config = {
         'text-muted': '#888',
       },
       fontFamily: {
-        serif: ['"Noto Serif SC"', 'Georgia', 'serif'],
+        serif: ['var(--font-serif)', 'Georgia', 'serif'],
         sans: ['system-ui', '-apple-system', 'sans-serif'],
       },
       maxWidth: {
