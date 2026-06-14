@@ -6,8 +6,10 @@ import html from 'remark-html'
 import type { EssayMeta, Essay } from '@/types'
 
 const CONTENT_DIR = path.join(process.cwd(), 'content', 'essays')
+let _essaysCache: EssayMeta[] | null = null
 
 export function getAllEssays(): EssayMeta[] {
+  if (_essaysCache) return _essaysCache
   const essays: EssayMeta[] = []
   if (!fs.existsSync(CONTENT_DIR)) return essays
 
@@ -31,7 +33,12 @@ export function getAllEssays(): EssayMeta[] {
     }
   }
 
-  return essays.sort((a, b) => (b.date || '').localeCompare(a.date || ''))
+  _essaysCache = essays.sort((a, b) => {
+    const da = a.date ? new Date(a.date).getTime() : 0
+    const db = b.date ? new Date(b.date).getTime() : 0
+    return db - da
+  })
+  return _essaysCache
 }
 
 export function getEssaysByTheme(): Map<string, EssayMeta[]> {
