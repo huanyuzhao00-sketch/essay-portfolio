@@ -14,15 +14,4 @@ export default function ContactPage() {
           </a>
         </div>
         <div className="w-12 h-px bg-warm-line mx-auto" />
-        <div>
-          <p className="text-xs tracking-[0.2em] text-text-muted font-sans font-bold mb-3">社交</p>
-          <div className="flex justify-center gap-6">
-            <a href="#" className="text-sm text-text-muted hover:text-ochre transition-colors font-sans">豆瓣</a>
-            <a href="#" className="text-sm text-text-muted hover:text-ochre transition-colors font-sans">即刻</a>
-            <a href="#" className="text-sm text-text-muted hover:text-ochre transition-colors font-sans">GitHub</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  )
-}
+     
