@@ -1,0 +1,60 @@
+<h2>正文页间距——三种不同思路</h2>
+<p class="subtitle">这次变化更大：窄栏 vs 宽栏、段首缩进 vs 空行分隔、不同的字色灰度</p>
+
+<div class="cards">
+  <div class="card" data-choice="narrow-center" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#faf9f6;padding:32px 40px;min-height:300px;display:flex;justify-content:center;font-family:'Georgia','Noto Serif SC',serif;">
+      <div style="max-width:220px;">
+        <div style="font-size:8px;color:#b0a99d;letter-spacing:2px;margin-bottom:24px;">城 市 · 2026.03.15</div>
+        <div style="font-size:18px;color:#2d2c28;margin-bottom:20px;">深夜的便利店</div>
+        <div style="width:20px;height:1px;background:#c4a882;margin-bottom:28px;"></div>
+        <div style="font-size:14px;color:#555;line-height:2.4;">
+          <p style="margin-bottom:24px;">凌晨两点，城西的便利店是整条街上唯一亮着灯的地方。</p>
+          <p style="margin-bottom:24px;">玻璃门滑开，暖风混着关东煮的香气扑面而来。</p>
+          <p>我拿了一瓶热乌龙茶，走到靠窗的吧台前坐下。窗外偶尔有车无声地滑过。</p>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A — 窄栏诗行</h3>
+      <p>正文仅 220px 宽，一句一行，像读诗。字色偏灰（#555），视觉安静，适合短篇慢读。</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="indent-classic" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#faf9f6;padding:32px 28px;min-height:300px;font-family:'Georgia','Noto Serif SC',serif;">
+      <div style="max-width:320px;">
+        <div style="font-size:8px;color:#b0a99d;letter-spacing:2px;margin-bottom:18px;">城 市 · 2026.03.15</div>
+        <div style="font-size:20px;color:#2d2c28;margin-bottom:16px;">深夜的便利店</div>
+        <div style="width:20px;height:1px;background:#c4a882;margin-bottom:22px;"></div>
+        <div style="font-size:13px;color:#3a3a3a;line-height:2.2;">
+          <p style="text-indent:26px;margin-bottom:6px;">凌晨两点，城西的便利店是整条街上唯一亮着灯的地方。玻璃门滑开，暖风混着关东煮的香气扑面而来。收银台后面，一个戴眼镜的年轻男人抬起头看了我一眼，又低头继续翻手里的漫画。</p>
+          <p style="text-indent:26px;">我拿了一瓶热乌龙茶，走到靠窗的吧台前坐下。窗外偶尔有车无声地滑过，车灯在玻璃上拖出一道模糊的光痕，像墨落在宣纸上缓缓洇开。我把瓶盖拧紧，推门走出去。街上又只剩下风。</p>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B — 传统书版</h3>
+      <p>段落首行缩进两字、段间不留空、字色更沉。像翻开一本老式中文书，经典书卷气。</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="airy-journal" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#faf9f6;padding:32px 30px;min-height:300px;font-family:'Georgia','Noto Serif SC',serif;">
+      <div style="max-width:300px;">
+        <div style="font-size:8px;color:#b0a99d;letter-spacing:2px;margin-bottom:32px;">城 市 · 2026.03.15</div>
+        <div style="font-size:19px;color:#2d2c28;margin-bottom:32px;">深夜的便利店</div>
+        <div style="width:16px;height:1px;background:#d4c5b0;margin-bottom:32px;"></div>
+        <div style="font-size:13px;color:#4a4a4a;line-height:2.6;">
+          <p style="margin-bottom:36px;">凌晨两点，城西的便利店是整条街上唯一亮着灯的地方。</p>
+          <p style="margin-bottom:36px;">玻璃门滑开，暖风混着关东煮的香气扑面而来。收银台后面，一个戴眼镜的年轻男人抬起头看了我一眼。</p>
+          <p>我拿了一瓶热乌龙茶，走到靠窗的吧台前坐下。</p>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C — 手记空气感</h3>
+      <p>所有间距拉大，段落间隔尤其夸张。像一本随手翻开的笔记本，每个段落自成一小片思绪。</p>
+    </div>
+  </div>
+</div>

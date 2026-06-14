@@ -1,0 +1,5 @@
+{"type":"click","text":"B\n    \n      青墨\n      背景：冷白 #f8f8f7 · 文字：墨蓝 #2a2d34 · 点缀：青灰 #7a8b8b · 细线：淡青 #e2e5e4","choice":"cool-ink","id":null,"timestamp":1781430494563}
+{"type":"click","text":"A\n    \n      暖赭石\n      背景：米白 #faf9f6 · 文字：深棕 #2d2c28 · 点缀：赭石金 #c4a882 · 细线：暖灰 #e8e3db","choice":"warm-ochre","id":null,"timestamp":1781430495556}
+{"type":"click","text":"A\n    \n      思源宋体（推荐）\n      Google 开源，免费商用。气质温润，适合文学性文本。搭配系统黑体做导航/标签。","choice":"font-source-serif","id":null,"timestamp":1781430504268}
+{"type":"click","text":"B\n    \n      系统宋体优先\n      不加载额外字体，用各平台自带的宋体/明体。加载最快，但各设备显示效果差异大。","choice":"font-system","id":null,"timestamp":1781430505530}
+{"type":"click","text":"A\n    \n      思源宋体（推荐）\n      Google 开源，免费商用。气质温润，适合文学性文本。搭配系统黑体做导航/标签。","choice":"font-source-serif","id":null,"timestamp":1781430506696}
