@@ -9,15 +9,10 @@ const links = [
 
 export default function NavBar() {
   return (
-    <header className="sticky top-0 z-10 bg-paper/95 backdrop-blur-sm">
+    <header className="sticky top-0 z-10 bg-paper/95 backdrop-blur-sm border-b border-warm-line">
+      {/* Top row: nav links aligned right */}
       <div className="max-w-xl mx-auto px-5 md:px-12">
-        <nav className="h-16 flex items-center justify-between border-b border-warm-line">
-          <Link
-            href="/"
-            className="text-base text-ochre tracking-[0.2em] hover:text-ink transition-colors"
-          >
-            夜航船
-          </Link>
+        <nav className="flex justify-end py-3">
           <ul className="flex gap-5 md:gap-7">
             {links.map(link => (
               <li key={link.href}>
@@ -31,6 +26,15 @@ export default function NavBar() {
             ))}
           </ul>
         </nav>
+      </div>
+      {/* Bottom row: brand name centered */}
+      <div className="text-center pb-4">
+        <Link
+          href="/"
+          className="text-lg text-ochre tracking-[0.25em] hover:text-ink transition-colors"
+        >
+          夜航船
+        </Link>
       </div>
     </header>
   )
