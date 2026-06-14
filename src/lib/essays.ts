@@ -23,10 +23,14 @@ export function getAllEssays(): EssayMeta[] {
     for (const file of files) {
       const raw = fs.readFileSync(path.join(themeDir, file), 'utf-8')
       const { data } = matter(raw)
+      const rawDate = data.date
+      const dateStr = rawDate instanceof Date
+        ? rawDate.toISOString().slice(0, 10)
+        : String(rawDate || '')
       essays.push({
         slug: file.replace(/\.md$/, ''),
         title: data.title || file.replace(/\.md$/, ''),
-        date: data.date || '',
+        date: dateStr,
         theme: data.theme || theme.name,
         summary: data.summary || '',
       })
@@ -62,11 +66,15 @@ export async function getEssay(theme: string, slug: string): Promise<Essay | nul
   const raw = fs.readFileSync(filePath, 'utf-8')
   const { data, content } = matter(raw)
   const result = await remark().use(html).process(content)
+  const rawDate = data.date
+  const dateStr = rawDate instanceof Date
+    ? rawDate.toISOString().slice(0, 10)
+    : String(rawDate || '')
 
   return {
     slug,
     title: data.title || slug,
-    date: data.date || '',
+    date: dateStr,
     theme: data.theme || theme,
     summary: data.summary || '',
     contentHtml: result.toString(),
