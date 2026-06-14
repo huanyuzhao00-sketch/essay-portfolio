@@ -8,3 +8,9 @@
     @apply bg-paper text-ink font-serif antialiased;
   }
 }
+
+@layer utilities {
+  .text-indent {
+    text-indent: 2em;
+  }
+}
