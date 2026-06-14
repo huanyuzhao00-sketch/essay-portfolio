@@ -2,10 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+::selection {
+  background-color: #c4a882;
+  color: #faf9f6;
+}
 
 @layer base {
   body {
     @apply bg-paper text-ink font-serif antialiased;
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    font-size: 15px;
   }
 }
 
