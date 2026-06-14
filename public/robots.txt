@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://doremi.xin/sitemap.xml
+Sitemap: https://www.doremi.xin/sitemap.xml

@@ -1,7 +1,7 @@
 const fs = require('fs')
 const path = require('path')
 
-const BASE_URL = 'https://doremi.xin'
+const BASE_URL = 'https://www.doremi.xin'
 const CONTENT_DIR = path.join(__dirname, '..', 'content', 'essays')
 
 const pages = [

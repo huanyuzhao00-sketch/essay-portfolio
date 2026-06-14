@@ -12,7 +12,7 @@ const notoSerif = Noto_Serif_SC({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://doremi.xin'),
+  metadataBase: new URL('https://www.doremi.xin'),
   title: {
     default: '夜航船 · Doremi的随笔集',
     template: '%s · 夜航船',
