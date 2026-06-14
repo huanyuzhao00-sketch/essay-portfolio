@@ -14,7 +14,7 @@ export default function HomePage() {
         <h1 className="text-3xl md:text-4xl text-ink tracking-[0.15em] mb-6">夜航船</h1>
         <div className="w-8 h-px bg-ochre mx-auto mb-6" />
         <p className="text-sm text-text-muted leading-loose">
-          九零后写作者<br />记录城市、季节与日常的缝隙
+          零零后作者<br />记录城市、季节与日常的缝隙
         </p>
       </section>
 
