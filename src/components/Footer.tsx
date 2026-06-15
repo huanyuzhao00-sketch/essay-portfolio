@@ -8,27 +8,15 @@ export default function Footer() {
   const [isAdmin, setIsAdmin] = useState(false)
 
   useEffect(() => {
-    // Check if already unlocked
     if (localStorage.getItem(STORAGE_KEY) === '1') {
       setIsAdmin(true)
-      loadScript()
-      return
     }
-    // Check if visiting with secret key
     const params = new URLSearchParams(window.location.search)
     if (params.get('stats') === 'doremi') {
       localStorage.setItem(STORAGE_KEY, '1')
       setIsAdmin(true)
-      loadScript()
     }
   }, [])
-
-  function loadScript() {
-    const script = document.createElement('script')
-    script.async = true
-    script.src = '//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'
-    document.body.appendChild(script)
-  }
 
   return (
     <footer className="border-t border-warm-line py-8 text-center font-sans">

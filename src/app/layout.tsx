@@ -40,6 +40,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <NavBar />
         <main className="flex-1">{children}</main>
         <Footer />
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" />
       </body>
     </html>
   )
