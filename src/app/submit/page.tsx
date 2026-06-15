@@ -21,7 +21,7 @@ export default function SubmitPage() {
         <div className="w-6 h-px bg-ochre mx-auto mb-6" />
         <p className="text-sm text-text-muted leading-relaxed">
           夜航船欢迎所有真诚的文字。<br />
-          随笔、散文、短篇均可，纯文字中文写作。
+          随笔、散文、短篇均可，目前仅接受中文投稿哦。
         </p>
       </div>
 
