@@ -3,7 +3,7 @@ import Link from 'next/link'
 const links = [
   { href: '/essays', label: '作品' },
   { href: '/about', label: '关于' },
-  { href: '/contact', label: '联系' },
+  { href: '/submit', label: '投稿' },
   { href: '/search', label: '搜索' },
 ]
 
