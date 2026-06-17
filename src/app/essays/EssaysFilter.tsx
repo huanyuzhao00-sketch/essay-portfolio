@@ -5,16 +5,13 @@ import { ReactNode, useEffect, useRef } from 'react'
 
 function ThemeFilter({ themes, active }: { themes: string[]; active: string | null }) {
   const router = useRouter()
-  const searchParams = useSearchParams()
 
   function setFilter(theme: string | null) {
-    const params = new URLSearchParams(searchParams.toString())
     if (theme) {
-      params.set('theme', theme)
+      router.push(`/essays?theme=${encodeURIComponent(theme)}`)
     } else {
-      params.delete('theme')
+      router.push('/essays')
     }
-    router.push(`/essays?${params.toString()}`)
   }
 
   return (
