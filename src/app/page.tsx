@@ -7,38 +7,46 @@ export default function HomePage() {
   const recentEssays = getAllEssays().slice(0, 5)
 
   return (
-    <div className="max-w-xl mx-auto px-5 md:px-12 py-16 md:py-24">
+    <div className="max-w-xl mx-auto px-5 md:px-12 py-20 md:py-28">
       {/* Hero */}
-      <section className="text-center mb-16">
-        <p className="text-[10px] tracking-[0.4em] text-text-muted font-sans font-bold mb-8">Doremi的随笔集</p>
-        <h1 className="text-3xl md:text-4xl text-ink tracking-[0.15em] mb-6">夜航船</h1>
-        <div className="w-8 h-px bg-ochre mx-auto mb-6" />
-        <p className="text-base text-ink tracking-[0.1em] mb-2">Doremi</p>
-        <p className="text-sm text-text-muted leading-loose">
+      <section className="text-center mb-20">
+        <p className="text-[10px] tracking-[0.5em] text-text-muted font-sans font-bold mb-10">
+          DOREMI
+        </p>
+        <h1 className="text-3xl md:text-4xl text-ink tracking-[0.2em] mb-8">夜航船</h1>
+        <div className="w-10 h-px bg-ochre mx-auto mb-8" />
+        <p className="text-sm text-text-muted leading-loose max-w-xs mx-auto">
           零零后作者<br />记录城市、季节与日常的缝隙
         </p>
       </section>
 
-      {/* Theme tags */}
-      <section className="mb-12">
-        <div className="w-full h-px bg-warm-line mb-6" />
-        <div className="flex flex-wrap justify-center gap-4 md:gap-6">
-          {themes.map(theme => (
-            <Link
-              key={theme}
-              href={`/essays?theme=${encodeURIComponent(theme)}`}
-              className="text-sm text-text-muted font-bold hover:text-ochre transition-colors font-sans tracking-wider"
-            >
-              {theme}
-            </Link>
+      {/* Theme tags — refined */}
+      <section className="mb-16">
+        <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 font-sans">
+          {themes.map((theme, i) => (
+            <span key={theme} className="flex items-center gap-6">
+              <Link
+                href={`/essays?theme=${encodeURIComponent(theme)}`}
+                className="text-sm text-text-muted font-bold hover:text-ochre transition-colors tracking-widest"
+              >
+                {theme}
+              </Link>
+              {i < themes.length - 1 && (
+                <span className="text-warm-line text-xs">/</span>
+              )}
+            </span>
           ))}
         </div>
-        <div className="w-full h-px bg-warm-line mt-6" />
       </section>
+
+      {/* Divider */}
+      <div className="w-full h-px bg-warm-line mb-16" />
 
       {/* Recent essays */}
       <section>
-        <p className="text-[10px] tracking-[0.3em] text-text-muted font-sans font-bold mb-6 text-center">最新随笔</p>
+        <p className="text-[10px] tracking-[0.4em] text-text-muted font-sans font-bold mb-8 text-center">
+          最新随笔
+        </p>
         <div className="divide-y divide-warm-line">
           {recentEssays.map(essay => (
             <EssayCard key={`${essay.theme}/${essay.slug}`} essay={essay} />
@@ -46,9 +54,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Link to all essays */}
-      <div className="text-center mt-10">
-        <Link href="/essays" className="text-xs text-text-muted font-bold hover:text-ochre transition-colors tracking-wider font-sans">
+      {/* View all */}
+      <div className="text-center mt-12">
+        <Link
+          href="/essays"
+          className="text-xs text-text-muted font-bold hover:text-ochre transition-colors tracking-widest font-sans"
+        >
           查看全部作品 →
         </Link>
       </div>

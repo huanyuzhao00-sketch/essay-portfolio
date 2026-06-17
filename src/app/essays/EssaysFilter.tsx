@@ -18,25 +18,27 @@ function ThemeFilter({ themes, active }: { themes: string[]; active: string | nu
   }
 
   return (
-    <div className="flex flex-wrap gap-3 md:gap-5 justify-center font-sans">
+    <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 font-sans mb-8">
       <button
         onClick={() => setFilter(null)}
-        className={`text-sm tracking-wider font-bold transition-colors ${
+        className={`text-sm tracking-widest font-bold transition-colors ${
           active ? 'text-text-muted hover:text-ochre' : 'text-ochre'
         }`}
       >
         全部
       </button>
-      {themes.map(t => (
-        <button
-          key={t}
-          onClick={() => setFilter(t)}
-          className={`text-sm tracking-wider font-bold transition-colors ${
-            active === t ? 'text-ochre' : 'text-text-muted hover:text-ochre'
-          }`}
-        >
-          {t}
-        </button>
+      {themes.map((t, i) => (
+        <span key={t} className="flex items-center gap-6">
+          <span className="text-warm-line text-xs">/</span>
+          <button
+            onClick={() => setFilter(t)}
+            className={`text-sm tracking-widest font-bold transition-colors ${
+              active === t ? 'text-ochre' : 'text-text-muted hover:text-ochre'
+            }`}
+          >
+            {t}
+          </button>
+        </span>
       ))}
     </div>
   )
@@ -61,11 +63,7 @@ export default function EssaysFilter({ themes, children }: { themes: string[]; c
 
   return (
     <>
-      <div className="text-center mb-12">
-        <h1 className="text-2xl text-ink tracking-[0.15em] mb-4">作品</h1>
-        <div className="w-6 h-px bg-ochre mx-auto mb-6" />
-        <ThemeFilter themes={themes} active={activeTheme} />
-      </div>
+      <ThemeFilter themes={themes} active={activeTheme} />
       <div ref={ref}>{children}</div>
     </>
   )
