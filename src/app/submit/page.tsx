@@ -6,12 +6,33 @@ export default function SubmitPage() {
   const [name, setName] = useState('')
   const [title, setTitle] = useState('')
   const [content, setContent] = useState('')
+  const [email, setEmail] = useState('')
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
-    const body = `作者：${name}\n标题：${title}\n\n${content}\n\n---\n此稿件通过夜航船投稿系统提交`
-    const mailto = `mailto:huanyuzhao00@gmail.com?subject=投稿：${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`
-    window.location.href = mailto
+    const body = `作者：${name}\n邮箱：${email}\n标题：${title}\n\n${content}`
+
+    // If short enough, open QQ Mail compose directly
+    if (body.length < 1000) {
+      const url = `https://mail.qq.com/cgi-bin/compose?to=huanyuzhao00@gmail.com&subject=${encodeURIComponent('投稿：' + title)}&body=${encodeURIComponent(body)}`
+      window.open(url, '_blank')
+    } else {
+      // Long content: copy to clipboard, then open QQ Mail
+      navigator.clipboard.writeText(body).then(() => {
+        showToast('稿件已复制，请在QQ邮箱中粘贴（Ctrl+V）')
+      }).catch(() => {
+        showToast('稿件较长，请手动复制')
+      })
+      window.open('https://mail.qq.com', '_blank')
+    }
+  }
+
+  function showToast(msg: string) {
+    const toast = document.createElement('div')
+    toast.textContent = msg
+    toast.style.cssText = 'position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#2d2c28;color:#faf9f6;padding:12px 24px;font-size:13px;z-index:9999;font-family:sans-serif'
+    document.body.appendChild(toast)
+    setTimeout(() => toast.remove(), 4000)
   }
 
   return (
@@ -37,6 +58,20 @@ export default function SubmitPage() {
             required
             className="w-full bg-transparent border-b border-warm-line py-2 text-base text-ink placeholder:text-text-muted focus:outline-none focus:border-ochre transition-colors font-sans"
             placeholder="怎么称呼你"
+          />
+        </div>
+
+        <div>
+          <label className="block text-xs tracking-wider text-text-muted font-sans font-bold mb-2">
+            你的邮箱 <span className="text-text-muted font-normal">（方便我们回复你）</span>
+          </label>
+          <input
+            type="email"
+            value={email}
+            onChange={e => setEmail(e.target.value)}
+            required
+            className="w-full bg-transparent border-b border-warm-line py-2 text-base text-ink placeholder:text-text-muted focus:outline-none focus:border-ochre transition-colors font-sans"
+            placeholder="your@qq.com"
           />
         </div>
 
@@ -76,7 +111,7 @@ export default function SubmitPage() {
             提交
           </button>
           <p className="text-xs text-text-muted mt-4 font-sans">
-            点击提交后将打开你的邮箱客户端，稿件会直接发送到投稿邮箱。
+            点击提交后将自动跳转至 QQ 邮箱发送，无需手动复制。
           </p>
         </div>
       </form>
