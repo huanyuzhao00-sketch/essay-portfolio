@@ -33,6 +33,7 @@ export function getAllEssays(): EssayMeta[] {
         date: dateStr,
         theme: data.theme || theme.name,
         summary: data.summary || '',
+        author: data.author || undefined,
       })
     }
   }
@@ -77,6 +78,7 @@ export async function getEssay(theme: string, slug: string): Promise<Essay | nul
     date: dateStr,
     theme: data.theme || theme,
     summary: data.summary || '',
+    author: data.author || undefined,
     contentHtml: result.toString(),
   }
 }

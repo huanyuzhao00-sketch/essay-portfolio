@@ -27,6 +27,12 @@ export default async function EssayPage({ params }: { params: { theme: string; s
           <Link href={`/essays?theme=${encodeURIComponent(essay.theme)}`} className="hover:text-ochre transition-colors">
             {essay.theme}
           </Link>
+          {essay.author && (
+            <>
+              <span className="mx-2">·</span>
+              <span className="text-ochre">{essay.author}</span>
+            </>
+          )}
           <span className="mx-2">·</span>
           <span>{essay.date}</span>
         </div>

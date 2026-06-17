@@ -9,9 +9,16 @@ export default function EssayCard({ essay }: { essay: EssayMeta }) {
     >
       <div className="flex items-baseline justify-between gap-4">
         <div className="min-w-0">
-          <h3 className="text-base text-ink group-hover:text-ochre transition-colors leading-snug">
-            {essay.title}
-          </h3>
+          <div className="flex items-baseline gap-2">
+            <h3 className="text-base text-ink group-hover:text-ochre transition-colors leading-snug">
+              {essay.title}
+            </h3>
+            {essay.author && (
+              <span className="text-xs text-ochre font-sans font-bold tracking-wider whitespace-nowrap">
+                {essay.author}
+              </span>
+            )}
+          </div>
           {essay.summary && (
             <p className="text-xs text-text-muted mt-1.5 leading-relaxed line-clamp-1">
               {essay.summary}

@@ -4,6 +4,7 @@ export interface EssayMeta {
   date: string
   theme: string
   summary: string
+  author?: string
 }
 
 export interface Essay extends EssayMeta {
