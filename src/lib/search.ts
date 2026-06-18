@@ -6,7 +6,7 @@ let cachedEssays: EssayMeta[] = []
 
 export function initSearchIndex(essays: EssayMeta[]) {
   fuseInstance = new Fuse(essays, {
-    keys: ['title', 'summary', 'theme'],
+    keys: ['title', 'summary', 'theme', 'author'],
     threshold: 0.3,
     includeScore: true,
   })
