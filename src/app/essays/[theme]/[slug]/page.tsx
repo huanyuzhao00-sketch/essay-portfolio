@@ -19,8 +19,30 @@ export default async function EssayPage({ params }: { params: { theme: string; s
   const prev = currentIndex > 0 ? allEssays[currentIndex - 1] : null
   const next = currentIndex < allEssays.length - 1 ? allEssays[currentIndex + 1] : null
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: essay.title,
+    description: essay.summary,
+    datePublished: essay.date,
+    author: {
+      '@type': 'Person',
+      name: essay.author || 'Doremi',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: '夜航船',
+      url: 'https://www.doremi.xin',
+    },
+  }
+
   return (
-    <div className="max-w-reading mx-auto px-5 md:px-12 py-16 md:py-24">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <div className="max-w-reading mx-auto px-5 md:px-12 py-16 md:py-24">
       {/* Meta */}
       <div className="text-center mb-8">
         <div className="text-[10px] tracking-[0.2em] text-text-muted font-sans font-bold">
@@ -73,5 +95,6 @@ export default async function EssayPage({ params }: { params: { theme: string; s
         </div>
       </div>
     </div>
+    </>
   )
 }

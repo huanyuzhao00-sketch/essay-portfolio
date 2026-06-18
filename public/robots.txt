@@ -1,4 +1,20 @@
 User-agent: *
 Allow: /
 
+Disallow: /admin
+Disallow: /admin/
+
 Sitemap: https://www.doremi.xin/sitemap.xml
+
+# AI crawlers — allow for search visibility
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
