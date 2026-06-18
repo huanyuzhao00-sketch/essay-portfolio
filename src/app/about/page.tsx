@@ -6,21 +6,15 @@ export default function AboutPage() {
         <div className="w-6 h-px bg-ochre mx-auto" />
       </div>
 
-      <article>
+      <article className="prose-custom">
         <p className="text-base text-ink-light leading-[2.2] text-indent mb-6">
-          Doremi。情绪化，喜欢摇滚，挺自我的一个人。
+          Doremi，零零后。生于中国南方，计划旅居全球。
         </p>
-
         <p className="text-base text-ink-light leading-[2.2] text-indent mb-6">
-          写字对我来说不是爱好，也不是工作。就是习惯了。情绪来了，不写憋得慌。写完了也不一定是好了，但至少心里轻了一点。像一个装满了的杯子，倒出来一些，才能继续装别的东西。
+          每个平静的午后，每个难眠的夜里，每个悸动的瞬间，写城市里的日常，写吃过的食物，写遇到过的人，写那些不说出来就会忘记的瞬间。
         </p>
-
-        <p className="text-base text-ink-light leading-[2.2] text-indent mb-6">
-          不写的时候，喜欢睡觉，喜欢和爱人待在一起。能让我真正安静下来的事情不多，这是最管用的两件。
-        </p>
-
         <p className="text-base text-ink-light leading-[2.2] text-indent">
-          这个网站是我的夜航船。夜里的船，灯不灭。你什么时候来，它都在。读到了什么算我们的缘分，没读到也没关系。谢谢你来。
+          相信文字可以慢下来。在这个什么都很快的时代，慢慢地写完一段话，是少数几个还属于自己的时刻。
         </p>
       </article>
     </div>
